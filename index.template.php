@@ -357,20 +357,20 @@ function template_body_above()
 	echo '
 	<div id="wrapper">';
 
-	// Show the menu here, according to the menu sub template, followed by the navigation tree.
-	// Load mobile menu here
-	echo '
-	<a class="menu_icon mobile_user_menu"></a>
-	<div id="main_menu">
-		<div id="mobile_user_menu" class="popup_container">
-			<div class="popup_window description">
-				<div class="popup_heading">', $txt['mobile_user_menu'], '
-					<a href="javascript:void(0);" class="main_icons hide_popup"></a>
+		// Show the menu here, according to the menu sub template, followed by the navigation tree.
+		// Load mobile menu here
+		echo '
+		<a class="menu_icon mobile_user_menu"></a>
+		<div id="main_menu">
+			<div id="mobile_user_menu" class="popup_container">
+				<div class="popup_window description">
+					<div class="popup_heading">', $txt['mobile_user_menu'], '
+						<a href="javascript:void(0);" class="main_icons hide_popup"></a>
+					</div>
+					', template_menu(), '
 				</div>
-				', template_menu(), '
 			</div>
-		</div>
-	</div>';
+		</div>';
 
 	echo '</div><!-- #wrapper -->';
 
@@ -421,29 +421,30 @@ function template_body_below()
 			echo '</div><!-- #wrapper -->';
 
 	echo '</div><!-- #main_content_section -->';
-	echo ';<div id="content_section_bottom"></div>';
+	echo '<div id="content_section_bottom"></div>';
 
 echo '</div><!-- #footerfix -->';
 
-echo '<div id="footer_social">
-	<span class="soc1">
-		<span class="soc1_1"></span>
-		<div class="soc1_2"></div>
-		<span class="soc1_3"></span>
-	</span>
-	<span class="soc2">
-		<h6>'.$txt['social_serbasimiza_title'].'</h6>
-		<span class="soc2_social">
-			<div><a href="#" class="facebook">Facebook</a></div>
-			<div><a href="#" class="youtube">YouTube</a></div>
+	echo '
+	<div id="footer_social">
+		<span class="soc1">
+			<span class="soc1_1"></span>
+			<div class="soc1_2"></div>
+			<span class="soc1_3"></span>
 		</span>
-	</span>
-	<span class="soc3">
-		<span class="soc3_1"></span>
-		<div class="soc3_2"></div>
-		<span class="soc3_3"></span>
-	</span>
-</div>';
+		<span class="soc2">
+			<h6>'.$txt['social_serbasimiza_title'].'</h6>
+			<span class="soc2_social">
+				<div><a href="#" class="facebook">Facebook</a></div>
+				<div><a href="#" class="youtube">YouTube</a></div>
+			</span>
+		</span>
+		<span class="soc3">
+			<span class="soc3_1"></span>
+			<div class="soc3_2"></div>
+			<span class="soc3_3"></span>
+		</span>
+	</div>';
 	// Show the footer with copyright, terms and help links.
 	echo '
 	<div id="footer">
